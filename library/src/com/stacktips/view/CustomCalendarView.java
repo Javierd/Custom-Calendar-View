@@ -46,7 +46,7 @@ public class CustomCalendarView extends LinearLayout {
     private Date lastSelectedDay;
     private Typeface customTypeface;
 
-    private int firstDayOfWeek = Calendar.SUNDAY;
+    private int firstDayOfWeek = Calendar.MONDAY;
     private List<DayDecorator> decorators = null;
 
     private static final String DAY_OF_WEEK = "dayOfWeek";
@@ -140,7 +140,7 @@ public class CustomCalendarView extends LinearLayout {
         Locale locale = mContext.getResources().getConfiguration().locale;
         Calendar currentCalendar = Calendar.getInstance(locale);
 
-        setFirstDayOfWeek(Calendar.SUNDAY);
+        setFirstDayOfWeek(firstDayOfWeek);
         refreshCalendar(currentCalendar);
     }
 
@@ -152,12 +152,12 @@ public class CustomCalendarView extends LinearLayout {
         View titleLayout = view.findViewById(R.id.titleLayout);
         titleLayout.setBackgroundColor(calendarTitleBackgroundColor);
 
-        String dateText = new DateFormatSymbols(locale).getShortMonths()[currentCalendar.get(Calendar.MONTH)].toString();
+        String dateText = new DateFormatSymbols(locale).getMonths()[currentCalendar.get(Calendar.MONTH)].toString();
         dateText = dateText.substring(0, 1).toUpperCase() + dateText.subSequence(1, dateText.length());
 
         TextView dateTitle = (TextView) view.findViewById(R.id.dateTitle);
         dateTitle.setTextColor(calendarTitleTextColor);
-        dateTitle.setText(dateText + " " + currentCalendar.get(Calendar.YEAR));
+        dateTitle.setText(dateText);
         dateTitle.setTextColor(calendarTitleTextColor);
         if (null != getCustomTypeface()) {
             dateTitle.setTypeface(getCustomTypeface(), Typeface.BOLD);

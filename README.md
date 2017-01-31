@@ -30,7 +30,7 @@ If you enjoy this library, don’t forget to follow me on my twitter handle [@np
 
 ```java
 dependencies {
-    compile 'com.github.npanigrahy:Custom-Calendar-View:v1.0'
+    compile 'com.github.Javierd:Custom-Calendar-View:v1.0'
 }
 ```
 ### Maven
@@ -43,7 +43,7 @@ dependencies {
 **Step 2** Add the dependency in the form
 ```xml
 <dependency>
-     <groupId>com.github.npanigrahy</groupId>
+     <groupId>com.github.Javierd</groupId>
      <artifactId>Custom-Calendar-View</artifactId>
      <version>v1.0</version>
 </dependency>
@@ -55,7 +55,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 ```
 **Step-2** Add the dependency in the form
 ```java
-libraryDependencies += "com.github.npanigrahy" % "Custom-Calendar-View" % "v1.0"
+libraryDependencies += "com.github.Javierd" % "Custom-Calendar-View" % "v1.0"
 ```
 
 ## Using CustomCalendarView Library
